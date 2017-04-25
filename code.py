@@ -3,7 +3,6 @@ class aocLevelOne:
         coordinates = [0,0]
         pos = 0
         splitinput = str.split(", ")
-        print splitinput
         for instruct in splitinput:
             direction = instruct[:1]
             movement = int(instruct[1:])
@@ -20,11 +19,9 @@ class aocLevelOne:
             if(pos == 0):
                 curr = coordinates[1] + movement
                 coordinates[1] = curr
-                print curr
             if(pos == 90):
                 curr = coordinates[0] + movement
                 coordinates[0] = curr
-                print curr
             if(pos == 180):
                 curr = coordinates[1] - movement
                 coordinates[1] = curr
@@ -32,6 +29,4 @@ class aocLevelOne:
                 curr = coordinates[0] - movement
                 coordinates[0] = curr
 
-        print abs(coordinates[0])
-        print abs(coordinates[1])
         return abs(coordinates[0]) + abs(coordinates[1])
